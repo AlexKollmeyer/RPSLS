@@ -16,10 +16,10 @@ namespace RPSLS
             chosenGesture = "";
             score = 0;
         }
-        public override string ChooseGesture()
+        public override void ChooseGesture()
         {
-            string gesture = gestures[Int32.Parse(Console.ReadLine())];
-            return gesture;
+            this.chosenGesture = gestures[Int32.Parse(Console.ReadLine())];
+           
         }
     }
 }

@@ -17,12 +17,12 @@ namespace RPSLS
             chosenGesture = "";
             score = 0;
         }
-        public override string ChooseGesture()
+        public override void ChooseGesture()
         {
             Random rnd = new Random();
             int num = rnd.Next(0,gestures.Count());
-            string gesture = gestures[num];
-            return gesture;
+            this.chosenGesture=gestures[num];
+            
         }
     }
 }
