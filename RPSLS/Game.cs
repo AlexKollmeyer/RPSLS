@@ -26,6 +26,7 @@ namespace RPSLS
 
         public int ChooseNumberOfHumanPlayers()
         {
+            
             return 0;
         }
 
