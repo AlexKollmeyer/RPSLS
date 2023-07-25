@@ -18,8 +18,15 @@ namespace RPSLS
         }
         public override void ChooseGesture()
         {
-            this.chosenGesture = gestures[Int32.Parse(Console.ReadLine())];
-           
+            Console.WriteLine("Type the associated number to select a gesture" +
+                "1:rock" +
+                "2:paper" +
+                "3:scissors" +
+                "4:lizard" +
+                "5:spock");
+            this.chosenGesture = gestures[Int32.Parse(Console.ReadLine())-1];
+            Console.WriteLine($"{this.name} chooses {chosenGesture}");
+
         }
     }
 }

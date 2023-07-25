@@ -22,7 +22,7 @@ namespace RPSLS
             Random rnd = new Random();
             int num = rnd.Next(0,gestures.Count());
             this.chosenGesture=gestures[num];
-            
+            Console.WriteLine($"The computer chooses {chosenGesture}");
         }
     }
 }
