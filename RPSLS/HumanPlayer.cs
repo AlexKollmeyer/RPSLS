@@ -18,7 +18,8 @@ namespace RPSLS
         }
         public override string ChooseGesture()
         {
-            switch 
+            string gesture = gestures[Int32.Parse(Console.ReadLine())];
+            return gesture;
         }
     }
 }

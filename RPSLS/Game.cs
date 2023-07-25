@@ -26,13 +26,15 @@ namespace RPSLS
 
         public int ChooseNumberOfHumanPlayers()
         {
-            
-            return 0;
+
+            Console.WriteLine("Choose One or two players");
+            int numberOfHumanPlayers = Int32.Parse(Console.ReadLine());
+            return numberOfHumanPlayers;
         }
 
         public void CreatePlayerObjects(int numberOfHumanPlayers)
         {
-
+            if (numberOfHumanPlayers=)
         }
 
         public void CompareGestures()
