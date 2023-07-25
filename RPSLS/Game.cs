@@ -49,7 +49,7 @@ namespace RPSLS
             playerOne = new HumanPlayer(Console.ReadLine());
             if (numberOfHumanPlayers == 1)
             {
-                playerTwo = new ComputerPlayer("PlayerTwo");
+                playerTwo = new ComputerPlayer("The computer");
             }
             else
             {
@@ -68,13 +68,13 @@ namespace RPSLS
             {
                 if (playerTwo.chosenGesture == "scissor" || playerTwo.chosenGesture == "lizard")
                 {
-                    Console.WriteLine("Player One wins");
+                    Console.WriteLine($"{playerOne.name} wins");
                     playerOne.score++;
                 }
                 else
                 {
 
-                    Console.WriteLine("Player two wins");
+                    Console.WriteLine($"{playerTwo.name} wins");
                     playerTwo.score++;
                 };
             }
@@ -82,54 +82,54 @@ namespace RPSLS
             {
                 if (playerTwo.chosenGesture == "paper" || playerTwo.chosenGesture == "lizard")
                 {
-                    Console.WriteLine("Player One wins");
+                    Console.WriteLine($"{playerOne.name} wins");
                     playerOne.score++;
                 }
                 else
                 {
-                    Console.WriteLine("Player two wins");
+                    Console.WriteLine($"{playerTwo.name} wins");
                     playerTwo.score++;
                 }
             }
             else if (playerOne.chosenGesture == "paper")
             {
-                if (playerTwo.chosenGesture == "rock" || playerTwo.chosenGesture == "spock")
+                if (playerTwo.chosenGesture == "rock" || playerTwo.chosenGesture == "Spock")
                 {
-                    Console.WriteLine("Player One wins");
+                    Console.WriteLine($"{playerOne.name} wins");
                     playerOne.score++;
                 }
                 else
                 {
 
-                    Console.WriteLine("Player two wins");
+                    Console.WriteLine($"{playerTwo.name} wins");
                     playerTwo.score++;
                 };
             }
             else if (playerOne.chosenGesture == "lizard")
             {
-                if (playerTwo.chosenGesture == "paper" || playerTwo.chosenGesture == "spock")
+                if (playerTwo.chosenGesture == "paper" || playerTwo.chosenGesture == "Spock")
                 {
-                    Console.WriteLine("Player One wins");
+                    Console.WriteLine($"{playerOne.name} wins");
                     playerOne.score++;
                 }
                 else
                 {
 
-                    Console.WriteLine("Player two wins");
+                    Console.WriteLine($"{playerTwo.name} wins");
                     playerTwo.score++;
                 };
             }
-            else if (playerOne.chosenGesture == "spock")
+            else if (playerOne.chosenGesture == "Spock")
             {
-                if (playerTwo.chosenGesture == "scissor" || playerTwo.chosenGesture == "rock")
+                if (playerTwo.chosenGesture == "scissors" || playerTwo.chosenGesture == "rock")
                 {
-                    Console.WriteLine("Player One wins");
+                    Console.WriteLine($"{playerOne.name} wins");
                     playerOne.score++;
                 }
                 else
                 {
 
-                    Console.WriteLine("Player two wins");
+                    Console.WriteLine($"{playerTwo.name} wins");
                     playerTwo.score++;
                 };
             }
@@ -137,7 +137,14 @@ namespace RPSLS
 
         public void DisplayGameWinner()
         {
-
+            if (playerOne.score == 2)
+            {
+                Console.WriteLine($"{playerOne.name} wins the game!");
+            }
+            else
+            {
+                Console.WriteLine($"{playerTwo.name} wins the game!");
+            }
         }
 
         public void RunGame()
@@ -150,6 +157,7 @@ namespace RPSLS
                 playerTwo.ChooseGesture();
                 CompareGestures();
             }
+            DisplayGameWinner();
         }
     }
 }
