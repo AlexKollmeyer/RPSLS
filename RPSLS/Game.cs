@@ -21,7 +21,18 @@ namespace RPSLS
         //Member Methods (CAN DO)
         public void WelcomeMessage()
         {
-            Console.WriteLine("Welcome to RPSLS! Here are the rules:\n");
+            Console.WriteLine("Welcome to RPSLS! Here are the rules:" +
+                "\r\n You and your oppenent will both select one of the gestures(rock, paper, scissors, lizard, and Spock.) and the winner is based off the list below. "+
+                "\nRock crushes Scissors" +
+                "\r\nScissors cuts Paper " +
+                "\r\nPaper covers Rock" +
+                "\r\nRock crushes Lizard" +
+                "\r\nLizard poisons Spock" +
+                "\r\nSpock smashes Scissors" +
+                "\r\nScissors decapitates Lizard" +
+                "\r\nLizard eats Paper" +
+                "\r\nPaper disproves Spock" +
+                "\r\nSpock vaporizes Rock");
         }
 
         public int ChooseNumberOfHumanPlayers()
@@ -34,18 +45,20 @@ namespace RPSLS
 
         public void CreatePlayerObjects(int numberOfHumanPlayers)
         {
-            playerOne = new HumanPlayer("PlayerOne");
+            Console.WriteLine("Player one enter your name");
+            playerOne = new HumanPlayer(Console.ReadLine());
             if (numberOfHumanPlayers == 1)
             {
                 playerTwo = new ComputerPlayer("PlayerTwo");
             }
             else
             {
-                playerTwo = new HumanPlayer("PlayerTwo");
+                Console.WriteLine("Player two enter your name");
+                playerTwo = new HumanPlayer(Console.ReadLine());
             }
         }
 
-        public void CompareGestures()
+        public void CompareGestures(HumanPlayer playerOne,Player playertwo)
         {
 
         }
